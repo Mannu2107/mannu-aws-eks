@@ -10,9 +10,9 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = "tcslabsfjbs"
+    bucket = "myghaction"
     key    = "eks/terraform.tfstate"
-    region = "us-east-1"
+    region = "eu-north-1"
   }
 }
 # Variables
