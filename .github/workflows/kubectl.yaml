@@ -1,4 +1,4 @@
-name: Kubectl commands
+name: Kubectl command
 
 on: workflow_dispatch
 
@@ -8,6 +8,9 @@ permissions:
 jobs:
   terraform:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./eks
 
     steps:
     - name: Checkout code
@@ -16,8 +19,8 @@ jobs:
     - name: configure aws credentials
       uses: aws-actions/configure-aws-credentials@v4
       with:
-        role-to-assume: arn:aws:iam::430118834478:role/gh-actions-role
-        aws-region: "us-east-1"
+        role-to-assume: arn:aws:iam::430118834478:role/GH-Action
+        aws-region: "eu-north-1"
     - name: get eks credential 
       run: aws eks update-kubeconfig --name eks-prod --region us-east-1 
     - name: kubectl command
