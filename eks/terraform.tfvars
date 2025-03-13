@@ -1,19 +1,19 @@
 # Network configuration
 vpc_cidr   = "192.168.0.0/16" # Different from default to show customization
-aws_region = "us-east-1"   # AWS region for resource creation
+aws_region = "eu-north-1"   # AWS region for resource creation
 
-availability_zones = ["us-east-1a", "us-east-1b", "us-east-1c"]
+availability_zones = ["eu-north-1a", "eu-north-1b", "eu-north-1c"]
 
 private_subnet_cidrs = {
-  "us-east-1a" = "192.168.0.0/20"
-  "us-east-1b" = "192.168.16.0/20"
-  "us-east-1c" = "192.168.32.0/20"
+  "eu-north-1a" = "192.168.0.0/20"
+  "eu-north-1b" = "192.168.16.0/20"
+  "eu-north-1c" = "192.168.32.0/20"
 }
 
 public_subnet_cidrs = {
-  "us-east-1a" = "192.168.48.0/20"
-  "us-east-1b" = "192.168.64.0/20"
-  "us-east-1c" = "192.168.80.0/20"
+  "eu-north-1a" = "192.168.48.0/20"
+  "eu-north-1b" = "192.168.64.0/20"
+  "eu-north-1c" = "192.168.80.0/20"
 }
 
 # EKS cluster configuration
